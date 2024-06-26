@@ -11,7 +11,7 @@ export class Partido {
     observacion: string;
     estado: number;
     createOn: Date | undefined;
-    createdBy: string;
+    createBy: string;
 
     constructor() {
         this.id = 0;
@@ -24,6 +24,6 @@ export class Partido {
         this.puntosB = 0;
         this.observacion = '';
         this.estado = 0;
-        this.createdBy = '';
+        this.createBy = '';
     }
 }

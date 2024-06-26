@@ -1,0 +1,68 @@
+<form class="example-container" [formGroup]="form" (ngSubmit)="operar()" #espForm="ngForm">
+    <div [hidden]="true">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="ID" required formControlName="id">
+        </mat-form-field>
+    </div>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Equipo A</mat-label>
+        <input matInput required formControlName="eqpA">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Equipo B</mat-label>
+        <input matInput required formControlName="eqpB">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Equipo V</mat-label>
+        <input matInput required formControlName="eqpV">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Goles Equipo A</mat-label>
+        <input matInput required formControlName="golA">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Goles Equipo B</mat-label>
+        <input matInput required formControlName="golB">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Puntos Equipo A</mat-label>
+        <input matInput required formControlName="puntosA">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Puntos Equipo B</mat-label>
+        <input matInput required formControlName="puntosB">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Observaciones</mat-label>
+        <input matInput required formControlName="observacion">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Estado</mat-label>
+        <input matInput formControlName="estado">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Creado por" required formControlName="createBy">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="espForm.invalid">
+        <mat-icon>done</mat-icon>
+        <span>Aceptar</span>
+    </button>
+
+    <button mat-raised-button color="accent" routerLink="/partido" type="button">
+        <mat-icon>close</mat-icon>
+        <span>Cancelar</span>
+    </button>
+</form>
+
+<br />

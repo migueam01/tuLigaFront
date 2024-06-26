@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatPaginatorImpl } from '../_shared/mat-paginator';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [],
@@ -23,7 +24,8 @@ import { MatPaginatorImpl } from '../_shared/mat-paginator';
     MatSortModule,
     MatIconModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatSnackBarModule
   ],
   exports: [
     MatButtonModule,
@@ -35,10 +37,11 @@ import { MatPaginatorImpl } from '../_shared/mat-paginator';
     MatSortModule,
     MatIconModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatSnackBarModule
   ],
   providers: [
-    {provide: MatPaginatorIntl, useClass: MatPaginatorImpl}
+    { provide: MatPaginatorIntl, useClass: MatPaginatorImpl }
   ]
 })
 export class MaterialModule { }

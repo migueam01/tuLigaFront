@@ -7,17 +7,22 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MaterialModule } from './material/material.module';
 import { PartidoComponent } from './pages/partido/partido.component';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
+import { PartidoEdicionComponent } from './pages/partido/partido-edicion/partido-edicion.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PartidoComponent
+    PartidoComponent,
+    PartidoEdicionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration(),
