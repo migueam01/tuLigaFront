@@ -19,6 +19,7 @@ export class PartidoComponent implements OnInit {
   dataSource!: MatTableDataSource<Partido>;
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  cantidad: number = 0;
 
   constructor(private partidoService: PartidoService, private snackBar: MatSnackBar, public route: ActivatedRoute) { }
 
@@ -36,10 +37,25 @@ export class PartidoComponent implements OnInit {
       });
     });
 
-    this.partidoService.listar().subscribe(data => {
+    /*this.partidoService.listar().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;
+    });*/
+
+    this.partidoService.listarPaginado(0, 1).subscribe(data => {
+      this.cantidad = data.totalElements;
+      this.dataSource = new MatTableDataSource(data.content);
+      this.dataSource.sort = this.sort;
+      this.dataSource.paginator = this.paginator;
+    });
+  }
+
+  mostrarMas(e: any) {
+    this.partidoService.listarPaginado(e.pageIndex, e.pageSize).subscribe(data => {
+      this.cantidad = data.totalElements;
+      this.dataSource = new MatTableDataSource(data.content);
+      this.dataSource.sort = this.sort;
     });
   }
 

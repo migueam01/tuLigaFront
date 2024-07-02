@@ -20,6 +20,11 @@ export class PartidoService {
     return this.http.get<Partido[]>(this.url);
   }
 
+  //pagina: la página que quiero mostrar y tam cantidad de elemento por página
+  listarPaginado(pagina: number, tam: number) {
+    return this.http.get<any>(`${this.url}/pageable?page=${pagina}&size=${tam}`);
+  }
+
   listarPorId(id: number) {
     return this.http.get<Partido>(`${this.url}/${id}`);
   }
