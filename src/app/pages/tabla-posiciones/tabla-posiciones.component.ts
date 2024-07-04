@@ -10,7 +10,7 @@ import { PartidoService } from '../../_service/partido.service';
 })
 export class TablaPosicionesComponent {
 
-  displayedColumns: string[] = ['equipo', 'puntos', 'partidosJugados', 'partidosGanados', 'partidosEmpatados', 'partidosPerdidos', 'golesMarcados', 'golesRecibidos', 'golDiferencia'];
+  displayedColumns: string[] = ['posicion', 'equipo', 'puntos', 'partidosJugados', 'partidosGanados', 'partidosEmpatados', 'partidosPerdidos', 'golesMarcados', 'golesRecibidos', 'golDiferencia'];
 
   dataSource!: MatTableDataSource<TablaPosicionesDTO>;
 

@@ -1,4 +1,5 @@
 export class TablaPosicionesDTO {
+    posicion!: number;
     equipo!: string;
     puntos!: number;
     partidosJugados!: number;

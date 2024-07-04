@@ -6,48 +6,53 @@
 
 <div class="example-container mat-elevation-z8">
     <mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="posicion">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let row">{{row.posicion}}</mat-cell>
+        </ng-container>
+
         <ng-container matColumnDef="equipo">
             <mat-header-cell *matHeaderCellDef>Equipo</mat-header-cell>
             <mat-cell *matCellDef="let row">{{row.equipo}}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="puntos">
-            <mat-header-cell *matHeaderCellDef>Puntos</mat-header-cell>
+            <mat-header-cell *matHeaderCellDef>PTOS</mat-header-cell>
             <mat-cell *matCellDef="let row">{{row.puntos}}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="partidosJugados">
-            <mat-header-cell *matHeaderCellDef>Partidos Jugados</mat-header-cell>
+            <mat-header-cell *matHeaderCellDef>PJ</mat-header-cell>
             <mat-cell *matCellDef="let row">{{row.partidosJugados}}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="partidosGanados">
-            <mat-header-cell *matHeaderCellDef>Partidos Ganados</mat-header-cell>
+            <mat-header-cell *matHeaderCellDef>PG</mat-header-cell>
             <mat-cell *matCellDef="let row">{{row.partidosGanados}}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="partidosEmpatados">
-            <mat-header-cell *matHeaderCellDef>Partidos Empatados</mat-header-cell>
+            <mat-header-cell *matHeaderCellDef>PE</mat-header-cell>
             <mat-cell *matCellDef="let row">{{row.partidosEmpatados}}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="partidosPerdidos">
-            <mat-header-cell *matHeaderCellDef>Partidos Perdidos</mat-header-cell>
+            <mat-header-cell *matHeaderCellDef>PP</mat-header-cell>
             <mat-cell *matCellDef="let row">{{row.partidosPerdidos}}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="golesMarcados">
-            <mat-header-cell *matHeaderCellDef>Goles Marcados</mat-header-cell>
+            <mat-header-cell *matHeaderCellDef>GF</mat-header-cell>
             <mat-cell *matCellDef="let row">{{row.golesMarcados}}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="golesRecibidos">
-            <mat-header-cell *matHeaderCellDef>Goles Recibidos</mat-header-cell>
+            <mat-header-cell *matHeaderCellDef>GC</mat-header-cell>
             <mat-cell *matCellDef="let row">{{row.golesRecibidos}}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="golDiferencia">
-            <mat-header-cell *matHeaderCellDef>Gol Diferencia</mat-header-cell>
+            <mat-header-cell *matHeaderCellDef>GD</mat-header-cell>
             <mat-cell *matCellDef="let row">{{row.golDiferencia}}</mat-cell>
         </ng-container>
 
