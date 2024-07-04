@@ -9,12 +9,14 @@ import { PartidoComponent } from './pages/partido/partido.component';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { PartidoEdicionComponent } from './pages/partido/partido-edicion/partido-edicion.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TablaPosicionesComponent } from './pages/tabla-posiciones/tabla-posiciones.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PartidoComponent,
-    PartidoEdicionComponent
+    PartidoEdicionComponent,
+    TablaPosicionesComponent
   ],
   imports: [
     BrowserModule,

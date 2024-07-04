@@ -3,6 +3,7 @@ import { environment } from '../../environments/environment.development';
 import { HttpClient } from '@angular/common/http';
 import { Partido } from '../_model/partido';
 import { Subject } from 'rxjs';
+import { TablaPosicionesDTO } from '../_model/TablaPosicionesDTO';
 
 @Injectable({
   providedIn: 'root'
@@ -39,5 +40,9 @@ export class PartidoService {
 
   eliminar(id: number) {
     return this.http.delete(`${this.url}/${id}`);
+  }
+
+  listarTablaPosiciones() {
+    return this.http.get<TablaPosicionesDTO[]>(`${this.url}/tabla_posiciones`);
   }
 }
